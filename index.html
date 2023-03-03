@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Adrian Bienias" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adrianbienias.com</title>
+    <style>
+      body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+      }
+      #intro-video {
+        width: 100vw;
+        height: 100vh;
+      }
+      #intro-video iframe {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="intro-video"></div>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+      let options = {
+        id: 241853131,
+        width: 1920,
+        height: 1080,
+        loop: true,
+        byline: false,
+        portrait: false,
+        title: false,
+        speed: true,
+        autoplay: true,
+      }
+
+      let player = new Vimeo.Player("intro-video", options)
+      player.setVolume(0.3)
+    </script>
+  </body>
+</html>
